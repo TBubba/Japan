@@ -30,26 +30,67 @@ namespace Japan
         }
 
         // Checks if the settings are legit/legal/acceptable
-        internal bool IfLegalSettings()
+        internal bool IfValidRoman()
         {
+            // Bounds variables
+            const int noZero = 3;
+            const int noFour = 2;
+            const int noSeven = 2;
+            const int noNine = 2;
+            const int noThousand = 2;
+            const int noOneThousand = 2;
+
             // Bounds
             if (WordForZero < 0 || // Zero
-                WordForZero > 2)
+                WordForZero >= noZero)
                 return false;
             if (WordForFour < 0 || // Four
-                WordForFour > 1)
+                WordForFour >= noFour)
                 return false;
             if (WordForSeven < 0 || // Seven
-                WordForSeven > 1)
+                WordForSeven >= noSeven)
                 return false;
             if (WordForNine < 0 || // Nine
-                WordForNine > 1)
+                WordForNine >= noNine)
                 return false;
             if (WordForThousand < 0 || // Thousand
-                WordForThousand > 1)
+                WordForThousand >= noThousand)
                 return false;
             if (WordForOneThousand < 0 || // One Thousand
-                WordForOneThousand > 1)
+                WordForOneThousand >= noOneThousand)
+                return false;
+
+            // No exceptions found
+            return true;
+        }
+        internal bool IfValidHiragana()
+        {
+            // Bounds variables
+            const int noZero = 1;
+            const int noFour = 2;
+            const int noSeven = 2;
+            const int noNine = 2;
+            const int noThousand = 1;
+            const int noOneThousand = 2;
+
+            // Bounds
+            if (WordForZero < 0 || // Zero
+                WordForZero >= noZero)
+                return false;
+            if (WordForFour < 0 || // Four
+                WordForFour >= noFour)
+                return false;
+            if (WordForSeven < 0 || // Seven
+                WordForSeven >= noSeven)
+                return false;
+            if (WordForNine < 0 || // Nine
+                WordForNine >= noNine)
+                return false;
+            if (WordForThousand < 0 || // Thousand
+                WordForThousand >= noThousand)
+                return false;
+            if (WordForOneThousand < 0 || // One Thousand
+                WordForOneThousand >= noOneThousand)
                 return false;
 
             // No exceptions found
