@@ -11,8 +11,10 @@ namespace JapanExample
     {
         // Application
         private List<IControlApplication> _applications;
-
         internal ReadOnlyCollection<IControlApplication> Applications;
+
+        // Input
+        private char _commandChar = '\\';
 
         // Events
         internal event EventHandler<InputEventArgs> OnInput;
@@ -71,6 +73,16 @@ namespace JapanExample
         // Input
         internal void Input(string input)
         {
+            // If input is a command
+            if (input.Length >= 1 &&
+                input[0] == _commandChar)
+            {
+                // Handle command
+
+                return;
+            }
+
+            // Send input
             if (OnInput != null)
                 OnInput(this, new InputEventArgs(input));
         }
@@ -85,6 +97,11 @@ namespace JapanExample
         {
             if (OnOutput != null)
                 OnOutput(this, new OutputEventArgs(text + "\n"));
+        }
+        internal void WriteLine()
+        {
+            if (OnOutput != null)
+                OnOutput(this, new OutputEventArgs("\n"));
         }
 
         // Clear

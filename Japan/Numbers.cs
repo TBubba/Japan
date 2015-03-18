@@ -85,6 +85,11 @@ namespace Japan
             new string[] {"おく"}
         };
 
+        // Static Variables //
+
+        public static long MaxNumberValue = 999999999999;
+        public static long MinNumberValue = 0;
+
         // Under-the-hood Methods //
 
         #region GetDigit_* (Roman)

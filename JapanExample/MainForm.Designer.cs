@@ -31,11 +31,11 @@
             this._scMain = new System.Windows.Forms.SplitContainer();
             this._rtbOutput = new System.Windows.Forms.RichTextBox();
             this._msMain = new System.Windows.Forms.MenuStrip();
-            this._ssMain = new System.Windows.Forms.StatusStrip();
-            this._rtbInput = new System.Windows.Forms.RichTextBox();
             this.applicationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.examplesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guessTheNumberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this._ssMain = new System.Windows.Forms.StatusStrip();
+            this._rtbInput = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this._scMain)).BeginInit();
             this._scMain.Panel1.SuspendLayout();
             this._scMain.Panel2.SuspendLayout();
@@ -79,6 +79,7 @@
             this._rtbOutput.TabIndex = 5;
             this._rtbOutput.TabStop = false;
             this._rtbOutput.Text = "";
+            this._rtbOutput.WordWrap = false;
             // 
             // _msMain
             // 
@@ -89,27 +90,6 @@
             this._msMain.Size = new System.Drawing.Size(392, 24);
             this._msMain.TabIndex = 5;
             this._msMain.Text = "menuStrip1";
-            // 
-            // _ssMain
-            // 
-            this._ssMain.Location = new System.Drawing.Point(0, 19);
-            this._ssMain.Name = "_ssMain";
-            this._ssMain.Size = new System.Drawing.Size(392, 22);
-            this._ssMain.TabIndex = 5;
-            this._ssMain.Text = "statusStrip1";
-            // 
-            // _rtbInput
-            // 
-            this._rtbInput.DetectUrls = false;
-            this._rtbInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._rtbInput.Location = new System.Drawing.Point(0, 0);
-            this._rtbInput.Multiline = false;
-            this._rtbInput.Name = "_rtbInput";
-            this._rtbInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this._rtbInput.Size = new System.Drawing.Size(392, 41);
-            this._rtbInput.TabIndex = 0;
-            this._rtbInput.Text = "";
-            this._rtbInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this._rtbInput_KeyDown);
             // 
             // applicationsToolStripMenuItem
             // 
@@ -133,6 +113,27 @@
             this.guessTheNumberToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.guessTheNumberToolStripMenuItem.Text = "Guess the Number";
             this.guessTheNumberToolStripMenuItem.Click += new System.EventHandler(this.guessTheNumberToolStripMenuItem_Click);
+            // 
+            // _ssMain
+            // 
+            this._ssMain.Location = new System.Drawing.Point(0, 19);
+            this._ssMain.Name = "_ssMain";
+            this._ssMain.Size = new System.Drawing.Size(392, 22);
+            this._ssMain.TabIndex = 5;
+            this._ssMain.Text = "statusStrip1";
+            // 
+            // _rtbInput
+            // 
+            this._rtbInput.DetectUrls = false;
+            this._rtbInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._rtbInput.Location = new System.Drawing.Point(0, 0);
+            this._rtbInput.Multiline = false;
+            this._rtbInput.Name = "_rtbInput";
+            this._rtbInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this._rtbInput.Size = new System.Drawing.Size(392, 41);
+            this._rtbInput.TabIndex = 0;
+            this._rtbInput.Text = "";
+            this._rtbInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this._rtbInput_KeyDown);
             // 
             // MainForm
             // 
